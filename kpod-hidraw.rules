@@ -1,0 +1,7 @@
+# #######################################################################################################
+# elecraft inc - kpod usb udev rules 
+# 
+# place this file into /etc/udev/rules.d 
+# when the kpod is connected via USB, its device will be permissioned correctly.   
+# #######################################################################################################
+KERNEL=="hidraw*", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="f12d", MODE="0666"
